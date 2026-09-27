@@ -1,0 +1,9 @@
+backend/venv/
+backend/.env
+.env
+frontend/node_modules/
+__pycache__/
+*.pyc
+frontend/dist/
+temp_deviation.pdf
+.vscode/

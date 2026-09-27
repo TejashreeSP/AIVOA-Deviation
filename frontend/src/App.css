@@ -1,0 +1,1075 @@
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  background: #f4f6f9;
+  color: #172033;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+
+/* =========================================
+   MAIN APP
+========================================= */
+
+.app {
+  display: grid;
+
+  grid-template-columns: 60% 40%;
+
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+}
+
+
+/* =========================================
+   LEFT FORM PANEL
+========================================= */
+
+.form-panel {
+  height: 100vh;
+  min-height: 0;
+
+  background: #ffffff;
+
+  border-right: 1px solid #e4e7ec;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  scrollbar-width: thin;
+  scrollbar-color: #c8ccd4 #ffffff;
+}
+
+
+/* Form content */
+
+.form-content {
+  width: 100%;
+
+  padding: 28px 42px 40px;
+}
+
+
+/* =========================================
+   LEFT SCROLLBAR
+========================================= */
+
+.form-panel::-webkit-scrollbar {
+  width: 8px;
+}
+
+.form-panel::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+.form-panel::-webkit-scrollbar-thumb {
+  background: #c8ccd4;
+
+  border-radius: 10px;
+}
+
+.form-panel::-webkit-scrollbar-thumb:hover {
+  background: #aeb4bf;
+}
+
+
+/* =========================================
+   FORM HEADER
+========================================= */
+
+.form-header {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  padding-bottom: 24px;
+  margin-bottom: 26px;
+
+  border-bottom: 1px solid #edf0f4;
+}
+
+.brand-section {
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+}
+
+.brand-icon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background: #5046e5;
+  color: white;
+
+  font-size: 19px;
+  font-weight: 700;
+
+  box-shadow:
+    0 5px 14px rgba(80, 70, 229, 0.22);
+}
+
+.form-header h1 {
+  margin: 0;
+
+  font-size: 25px;
+  font-weight: 700;
+
+  letter-spacing: -0.4px;
+}
+
+.form-header p {
+  margin: 4px 0 0;
+
+  color: #7a8392;
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.status {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 8px 13px;
+
+  border-radius: 20px;
+
+  background: #fff8e6;
+
+  color: #996b00;
+
+  border: 1px solid #f4e4b9;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #e6a400;
+}
+
+
+/* =========================================
+   SUCCESS MESSAGE
+========================================= */
+
+.success-message {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 22px;
+  padding: 12px 15px;
+
+  background: #eefbf3;
+
+  border: 1px solid #ccefd9;
+
+  color: #1d7a43;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.success-message span {
+  font-size: 16px;
+}
+
+
+/* =========================================
+   SECTIONS
+========================================= */
+
+.section {
+  margin-bottom: 30px;
+  padding-bottom: 27px;
+
+  border-bottom: 1px solid #edf0f4;
+}
+
+.section:last-of-type {
+  border-bottom: none;
+}
+
+
+/* =========================================
+   SECTION TITLE
+========================================= */
+
+.section-title {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 12px;
+
+  margin-bottom: 20px;
+}
+
+.section-title > span {
+  min-width: 29px;
+  height: 29px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background: #f0efff;
+
+  color: #5046e5;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.section-title h3 {
+  margin: 1px 0 3px;
+
+  color: #273044;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.7px;
+}
+
+.section-title p {
+  margin: 0;
+
+  color: #9299a6;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   FORM GRID
+========================================= */
+
+.form-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 18px;
+}
+
+
+/* =========================================
+   FORM FIELDS
+========================================= */
+
+.field {
+  min-width: 0;
+}
+
+.full-field {
+  margin-top: 18px;
+}
+
+label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #515b6b;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+input,
+textarea {
+  width: 100%;
+
+  border: 1px solid #dce1e8;
+
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  color: #202838;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+input {
+  height: 42px;
+
+  padding: 0 12px;
+}
+
+textarea {
+  min-height: 88px;
+
+  padding: 11px 12px;
+
+  resize: vertical;
+
+  line-height: 1.5;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #7169e8;
+
+  box-shadow:
+    0 0 0 3px rgba(80, 70, 229, 0.08);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #b0b6c0;
+}
+
+
+/* =========================================
+   SEVERITY
+========================================= */
+
+.severity-display {
+  min-height: 42px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 13px;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  border: 1px solid #dce1e8;
+}
+
+.severity-high {
+  background: #fff0f0;
+
+  color: #c0392b;
+
+  border-color: #f2c7c3;
+}
+
+.severity-medium {
+  background: #fff8e8;
+
+  color: #a56b00;
+
+  border-color: #f1ddb0;
+}
+
+.severity-low {
+  background: #edf9f2;
+
+  color: #21834b;
+
+  border-color: #c8ead5;
+}
+
+.severity-empty {
+  background: #f8f9fb;
+
+  color: #9aa1ad;
+}
+
+
+/* =========================================
+   SAVE BUTTON
+========================================= */
+
+.save-button {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 13px 18px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #5046e5;
+
+  color: white;
+
+  font-family: inherit;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 5px 14px rgba(80, 70, 229, 0.18);
+
+  transition:
+    transform 0.15s ease,
+    background 0.15s ease;
+}
+
+.save-button:hover:not(:disabled) {
+  background: #4338ca;
+
+  transform: translateY(-1px);
+}
+
+.save-button:disabled {
+  opacity: 0.65;
+
+  cursor: not-allowed;
+}
+
+.review-note {
+  margin: 10px 0 0;
+
+  text-align: center;
+
+  color: #9299a6;
+
+  font-size: 11px;
+}
+
+
+/* =========================================
+   RIGHT COPILOT PANEL
+========================================= */
+
+.copilot-panel {
+  height: 100vh;
+  min-height: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+
+  background: #f5f7fb;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   COPILOT HEADER
+========================================= */
+
+.copilot-header {
+  min-height: 76px;
+
+  flex-shrink: 0;
+
+  padding: 15px 24px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #e4e7ec;
+}
+
+.copilot-brand {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+}
+
+.copilot-icon {
+  width: 39px;
+  height: 39px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #5046e5;
+
+  color: white;
+
+  font-size: 19px;
+
+  box-shadow:
+    0 5px 14px rgba(80, 70, 229, 0.2);
+}
+
+.copilot-header h2 {
+  margin: 0;
+
+  color: #252b3a;
+
+  font-size: 16px;
+  font-weight: 750;
+}
+
+.copilot-header p {
+  margin: 3px 0 0;
+
+  color: #8a92a0;
+
+  font-size: 11px;
+}
+
+
+/* =========================================
+   ONLINE
+========================================= */
+
+.online-status {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  color: #23834d;
+
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.online-status span {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #27ae60;
+}
+
+
+/* =========================================
+   COPILOT INFO
+========================================= */
+
+.copilot-info {
+  flex-shrink: 0;
+
+  display: flex;
+
+  gap: 11px;
+
+  margin: 18px 20px 4px;
+
+  padding: 13px;
+
+  background: #f0efff;
+
+  border: 1px solid #e1defe;
+
+  border-radius: 9px;
+}
+
+.info-icon {
+  width: 26px;
+  height: 26px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 7px;
+
+  background: #5046e5;
+
+  color: white;
+
+  font-size: 12px;
+}
+
+.copilot-info strong {
+  display: block;
+
+  color: #37317e;
+
+  font-size: 12px;
+}
+
+.copilot-info p {
+  margin: 4px 0 0;
+
+  color: #6d679a;
+
+  font-size: 11px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   CHAT AREA
+========================================= */
+
+.chat-area {
+  flex: 1;
+
+  min-height: 0;
+
+  padding: 18px 20px;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  scrollbar-width: thin;
+  scrollbar-color: #c8ccd4 transparent;
+}
+
+
+/* =========================================
+   CHAT SCROLLBAR
+========================================= */
+
+.chat-area::-webkit-scrollbar {
+  width: 7px;
+}
+
+.chat-area::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.chat-area::-webkit-scrollbar-thumb {
+  background: #c8ccd4;
+
+  border-radius: 10px;
+}
+
+.chat-area::-webkit-scrollbar-thumb:hover {
+  background: #aeb4bf;
+}
+
+
+/* =========================================
+   AI MESSAGE
+========================================= */
+
+.ai-message {
+  max-width: 92%;
+
+  margin-bottom: 15px;
+
+  padding: 13px 15px;
+
+  background: #ffffff;
+
+  border: 1px solid #e7e9ee;
+
+  border-radius: 10px;
+
+  box-shadow:
+    0 2px 8px rgba(30, 40, 60, 0.03);
+}
+
+.message-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 7px;
+}
+
+.message-header span {
+  color: #333b4c;
+
+  font-size: 12px;
+
+  font-weight: 750;
+}
+
+.message-header small {
+  color: #a0a6b0;
+
+  font-size: 9px;
+}
+
+.ai-message p {
+  margin: 0;
+
+  color: #5e6675;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   USER MESSAGE
+========================================= */
+
+.user-message {
+  max-width: 82%;
+
+  margin: 0 0 15px auto;
+
+  padding: 12px 14px;
+
+  background: #5046e5;
+
+  color: white;
+
+  border-radius: 10px 10px 3px 10px;
+
+  box-shadow:
+    0 4px 10px rgba(80, 70, 229, 0.13);
+}
+
+.user-message .message-header {
+  margin-bottom: 5px;
+}
+
+.user-message .message-header span {
+  color: white;
+}
+
+.user-message .message-header small {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.user-message p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.95);
+
+  font-size: 12px;
+
+  line-height: 1.55;
+}
+
+
+/* =========================================
+   TYPING
+========================================= */
+
+.typing {
+  display: flex;
+
+  align-items: center;
+
+  gap: 4px;
+}
+
+.typing span {
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: #7169e8;
+}
+
+.typing em {
+  margin-left: 6px;
+
+  color: #9299a6;
+
+  font-size: 10px;
+
+  font-style: normal;
+}
+
+
+/* =========================================
+   INPUT AREA
+========================================= */
+
+.input-area {
+  flex-shrink: 0;
+
+  margin: 0 15px 12px;
+
+  padding: 12px;
+
+  background: white;
+
+  border: 1px solid #dfe3ea;
+
+  border-radius: 11px;
+
+  box-shadow:
+    0 4px 15px rgba(30, 40, 60, 0.04);
+}
+
+.input-area textarea {
+  min-height: 54px;
+
+  padding: 5px 4px;
+
+  border: none;
+
+  resize: none;
+
+  box-shadow: none;
+}
+
+.input-area textarea:focus {
+  box-shadow: none;
+}
+
+.input-area textarea::placeholder {
+  color: #a5abb5;
+}
+
+
+/* =========================================
+   INPUT ACTIONS
+========================================= */
+
+.input-actions {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 5px;
+}
+
+.upload-button {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  margin: 0;
+
+  color: #667080;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.upload-button:hover {
+  color: #5046e5;
+}
+
+.upload-button span {
+  font-size: 14px;
+}
+
+.send-button {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #5046e5;
+
+  color: white;
+
+  font-size: 19px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.15s ease,
+    transform 0.15s ease;
+}
+
+.send-button:hover:not(:disabled) {
+  background: #4338ca;
+
+  transform: translateY(-1px);
+}
+
+.send-button:disabled {
+  background: #c8cbd5;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.copilot-footer {
+  flex-shrink: 0;
+
+  padding: 0 20px 12px;
+
+  text-align: center;
+
+  color: #a0a6b1;
+
+  font-size: 9px;
+}
+
+
+/* =========================================
+   SPINNER
+========================================= */
+
+.button-spinner {
+  width: 14px;
+  height: 14px;
+
+  border: 2px solid rgba(255, 255, 255, 0.35);
+
+  border-top-color: white;
+
+  border-radius: 50%;
+
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .app {
+    grid-template-columns: 55% 45%;
+  }
+
+  .form-content {
+    padding: 25px;
+  }
+
+}
+
+
+@media (max-width: 800px) {
+
+  html,
+  body,
+  #root {
+    min-height: 100%;
+  }
+
+  .app {
+    display: block;
+
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .form-panel {
+    width: 100%;
+
+    height: auto;
+    min-height: auto;
+
+    overflow: visible;
+
+    border-right: none;
+  }
+
+  .form-content {
+    padding: 25px 20px 35px;
+  }
+
+  .copilot-panel {
+    width: 100%;
+
+    height: 700px;
+    min-height: 700px;
+
+    overflow: hidden;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-header {
+    align-items: flex-start;
+
+    gap: 15px;
+  }
+
+  .status {
+    display: none;
+  }
+
+}
